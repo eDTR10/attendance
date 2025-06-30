@@ -88,7 +88,7 @@ const AttendanceMainContainer = () => {
     const handleConfirm = async () => {
         if (scannedData) {
             try {
-                const response = await axios.post('/qr/all/', scannedData, {
+                await axios.post('/qr/all/', scannedData, {
                     headers: {
                         Authorization: `Token 3d43a067e8a84c40a405cb1eb00306cc5b5affb6`,
                     }

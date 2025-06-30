@@ -17,9 +17,9 @@ interface AttendanceData {
 function Display() {
     const [currentAttendee, setCurrentAttendee] = useState<AttendanceData | null>(null);
     const [queue, setQueue] = useState<AttendanceData[]>([]);
-    const [allAttendees, setAllAttendees] = useState<AttendanceData[]>([]);
+    const [_allAttendees, setAllAttendees] = useState<AttendanceData[]>([]);
     const timerRef = useRef<NodeJS.Timeout | null>(null);
-    const speech = useRef<Speech>();
+    const speech = useRef<any>();
 
 
         useEffect(() => {
@@ -178,11 +178,11 @@ function Display() {
     }, [currentAttendee]);
 
     // Reset stored attendees function (for development purposes)
-    const resetStoredAttendees = () => {
-        localStorage.removeItem('shownAttendees');
-        alert('Shown attendees reset. Page will refresh.');
-        window.location.reload();
-    };
+    // const resetStoredAttendees = () => {
+    //     localStorage.removeItem('shownAttendees');
+    //     alert('Shown attendees reset. Page will refresh.');
+    //     window.location.reload();
+    // };
 
     return (
         <div className="flex h-screen w-screen overflow-hidden relative bg-[#e8f1ff]">

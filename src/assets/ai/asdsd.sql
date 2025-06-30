@@ -1,0 +1,107 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Apr 24, 2025 at 02:39 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `eprojex_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `qr_qr`
+--
+
+CREATE TABLE `qr_qr` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `designation` varchar(255) NOT NULL,
+  `lgu_agency` varchar(255) NOT NULL,
+  `created_date` datetime(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `qr_qr`
+--
+
+INSERT INTO `qr_qr` (`id`, `name`, `email`, `designation`, `lgu_agency`, `created_date`) VALUES
+(1, 'Jason Llanes', 'llanes.jason@dict.gov.ph', 'ISA II', 'DICT Mis Or', '2025-04-23 23:39:48.796595'),
+(2, 'Ferdinand M. Carmona', 'ferdinandcarmona@gmail.com', 'RCC I', 'Kinoguitan', '2025-04-23 23:43:36.272464'),
+(3, 'Dairo, Rosilyn', 'rosilyndairo625@gmail.com', 'RCC1', 'Sagay', '2025-04-23 23:45:21.979629'),
+(4, 'TOLIBAS, RALF K.', 'maueralf02@gmail.com', 'LICENSING OFFICER I', 'Magsaysay', '2025-04-23 23:45:57.510062'),
+(5, 'Delima, Julie P.', 'mpdo@sikatmagsaysay.gov.ph', 'Municipal Planning and Development Coordinator - I', 'Magsaysay', '2025-04-23 23:46:07.138305'),
+(6, 'Gerona, Jerome D.', 'ict@sikatmagsaysay.gov.ph', 'Municipal ICT Officer - Designate', 'Magsaysay', '2025-04-23 23:46:32.480654'),
+(7, 'Buhisan, Arnold Jarn Ford G.', 'lgu@sikatmagsaysay.gov.ph', 'Municipal Administrator', 'Magsaysay', '2025-04-23 23:51:32.987542'),
+(8, 'REYCHUM S. BANUAG', 'rey_bans@yahoo.com', 'Planning Officer II', 'PLGU Camiguin', '2025-04-23 23:52:58.788337'),
+(9, 'joseph m. baguio', 'jmbaguio1@gmail.com', 'municipal administrator', 'LGU Lugait Misamis Oriental', '2025-04-23 23:55:55.853559'),
+(10, 'Mark Lester Gambol', 'mlfgambol@gmail.com', 'Provincial computer Engineer', 'Camiguin Mambajao', '2025-04-23 23:57:32.967915'),
+(11, 'joseph m. baguio', 'jmbaguio1@gmail.com', 'municipal administrator', 'LGU Lugait Misamis Oriental', '2025-04-23 23:58:24.655409'),
+(12, 'JOEM B. QUINALAGAN', 'zemaojme90@gmail.com', 'EXECUTIVE ASSISTANT IV', 'PROVINCIAL GOVERNMENT OF CAMIGUIN', '2025-04-23 23:58:45.966528'),
+(13, 'Lorena Taglucop', 'lorenataglucop@ustp.edu.ph', 'Faculty', 'USTP-CDO', '2025-04-23 23:59:49.795169'),
+(14, 'Jose Norlito Encabo', 'bongoflugait@gmail.com', 'Assessment Clerk II', 'Lugait', '2025-04-24 00:00:13.262635'),
+(15, 'Marie Daphne Rico', 'mtokinoguitan@gmail.com', 'RCC 1', 'Kinoguitan', '2025-04-24 00:02:26.340535'),
+(16, 'Ronald G. Bentuzal', 'ronaldbntzl@gmail.com', 'MPDC', 'Kinoguitan', '2025-04-24 00:02:34.198772'),
+(17, 'Ogsoc, Marie Loren S.', 'lgumahtreasury@gmail.com', 'Administrative Aide VI', 'Mahinog', '2025-04-24 00:03:31.157306'),
+(18, 'Ariel Tesocan', 'ayiayiayi1996@gmail.com', 'Sb Sec Staff', 'Mahinog', '2025-04-24 00:04:43.131141'),
+(19, 'Jerome G. Uayan', 'lguguinsilibanmayorsoffice@gmail.com', 'Admin Aide I', 'Guinsiliban', '2025-04-24 00:07:20.111279'),
+(20, 'Mata, Cora', 'cm6560@gmail.com', 'Municipal Treasurer/ BPLO', 'Sagay', '2025-04-24 00:11:40.155934'),
+(21, 'Jesie Mendoza Rayon', 'jesierayon02@gmail.com', 'License Inspector', 'Talisayan', '2025-04-23 00:13:12.051676'),
+(22, 'Julie A. Nieva-Costales', 'julienieva@dti.gov.ph', 'Information Officer III', 'DTI Region 10', '2025-04-24 00:19:43.221434'),
+(23, 'SAHILAN, IVAN CLYDE N.', 'ivanclyde.sahilan@gmail.com', 'ADMIN AIDE I / IT', 'Medina', '2025-04-24 00:21:18.359702'),
+(24, 'Torres, Oliver Gregory V.', 'torresolivergregory@gmail.com', 'MPDC', 'Talisayan', '2025-04-24 00:21:56.998132'),
+(25, 'de la Riarte, Mac Steven RJ T.', 'makistibin@gmail.com', 'MPDC', 'Catarman', '2025-04-24 00:23:10.655570'),
+(26, 'Gallogo, Jesus Dave M.', 'jesusdavegallogo@gmail.com', 'Job order', 'Catarman', '2025-04-24 00:24:15.404914'),
+(27, 'Maria Christy Comcom', 'kit.palarca19@gmail.com', 'Private Secretary', 'Catarman', '2025-04-24 00:24:28.380468'),
+(28, 'Jeson Canceler', 'jeson.canceler@gmail.com', 'BPLO Designate', 'Catarman', '2025-04-24 00:25:13.914968'),
+(29, 'Enrique S. Guevarra', 'cityadministrator@gingoog.gov.ph', 'City Administrator', 'Gingoog', '2025-04-24 00:28:07.223362'),
+(30, 'Abao, Lecia Acenas', 'scogonmisor@gmail.com', 'Admin', 'Sugbongcogon', '2025-04-24 00:32:18.710682'),
+(31, 'Carmela Gallardo Aban', 'carmelaaban@yahoo.com', 'Municipal Treasurer', 'Sugbongcogon', '2025-04-24 00:32:30.719365'),
+(32, 'Christy Gallardo', 'dinz.ggallardo46@gmail.com', 'BPLO', 'Sugbongcogon', '2025-04-24 00:33:29.010502'),
+(33, 'Acenas, Rommel Ungay', 'mpdc.subongcogon@gmail.com', 'MPDC', 'Sugbongcogon', '2025-04-24 00:34:35.187961'),
+(34, 'GARRIDO, JULIET Q.', 'businesslicensing@gingoog.gov.ph', 'LICENSING OFFICER IV', 'Gingoog City', '2025-04-24 00:35:15.318928'),
+(35, 'Marilou B. Cadavez', 'cadavezmsb2810@gmail.com', 'BPLO Designate', 'Guinsiliban', '2025-04-24 00:35:48.941630'),
+(36, 'Salon, Jessa Bonje', 'salonjessa6@gmail.com', 'Staff', 'Guinsiliban', '2025-04-24 00:36:57.771531'),
+(37, 'Panaligan, Patrick Joel Sabuero', 'patricksabuero@gmail.com', 'IT-Staff', 'Guinsiliban', '2025-04-24 00:38:05.973631'),
+(38, 'Talian, Michael Gadot', 'lgusagay110@gmail.com', 'Budget Officer', 'Sagay', '2025-04-24 00:38:14.806571'),
+(39, 'Gabutan, Marvin S', 'nivramnatubag33@gmail.com', 'Admin Aide IV/IT', 'Sagay', '2025-04-24 00:38:24.857005');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `qr_qr`
+--
+ALTER TABLE `qr_qr`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `qr_qr`
+--
+ALTER TABLE `qr_qr`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -1,6 +1,6 @@
 import  { useEffect, useState, useCallback, useRef } from 'react';
 import axios from './../../plugin/axios';
-import AI from './../../assets/ai/juan.mp4'
+// import AI from './../../assets/ai/juan.mp4'
 import Sas1 from './../../assets/ai/sas1.png'
 import Sas2 from './../../assets/ai/sas2.png'
 import Sas3 from './../../assets/ai/sas3.png'
@@ -167,13 +167,8 @@ function Display() {
     useEffect(() => {
         if (currentAttendee && speech.current) {
             speech.current.speak({
-                text: `Hello, Good day! Welcome ${currentAttendee.name} to CIO CONFERENCE, Enjoy!`
+                text: `Hello, Good day! Welcome ${currentAttendee.name}.       to The State of the Municipal Address, Thank you!`
             });
-        }else{
-            speech.current.speak({
-                text: `Hello, Good day! Welcome to CIO CONFERENCE, Enjoy!`
-            });
-            
         }
     }, [currentAttendee]);
 
@@ -194,33 +189,44 @@ function Display() {
          
             
 
-            <video src={AI} autoPlay loop muted className=' translate-y-[10vh] h-[100vh] object-contain absolute  border-none outline-none  '>
+            {/* <video src={AI} autoPlay loop muted className=' translate-y-[10vh] h-[100vh] object-contain absolute  border-none outline-none  '>
                 <source src={AI}  type="video/mp4" />
                 Your browser does not support the video tag.
                 <p className="text-center text-white">Your browser does not support the video tag.</p>
-            </video>
+            </video> */}
+            <div className=' fixed bottom-0 z-50  right-0  mr-[15vw] flex mb-[1vh] '>
+
+                <p>Developed By:</p>
+            <img className=' h-[8vh] object-contain ' src="/DICT-Logo-Final-2-300x153 (1).png" alt="" />
+
+
+            </div>
+           
+
+            <img className=' h-[50vh] object-contain flex self-center absolute ml-[8vw] mb-[10vw]' src="/logom.png" alt="" />
             <div className="flex-1 p-8 z-10 w-[0vw] items-center justify-center flex flex-col translate-y-[-10vh] translate-x-[10vw] animate__animated animate__fadeIn"> 
                 <div className="bg-white/30 border boder-border back rounded-xl  p-8 w-[50vw] mx-auto ">
                     {currentAttendee ? (
                         <div className="text-center space-y-4">
-                            <h1 className="text-2xl text-[#282828] mb-2">
-                                Welcome to DICT Region 10 <br /> <span className=' font-bold'>
-                                   LOCAL CHIEF INFORMATION OFFICER (CIO) CONFERENCE! </span> 
+                            <h1 className="text-4xl text-[#282828] mb-2">
+                                Welcome to  <br /> <span className=' font-bold'>
+                                   State of the Municipal Address (SOMA) </span> 
                             </h1>
                             <div className="animate-fade-in">
-                                <h2 className="text-5xl font-bold text-[#0036c6] mb-4">
+                                <h2 className="text-8xl font-bold text-[#0036c6] mb-4">
                                     {currentAttendee.name}
+
                                 </h2>
-                                <p className="text-xl text-gray-600 mb-2">
+                                <p className="text-4xl text-gray-600 mb-2">
                                 <span className=' font-bold'>{currentAttendee.lgu_agency}</span>  - {currentAttendee.designation}
                                 </p>
                                
                             </div>
                         </div>
                     ) : (
-                        <div className="text-center font-bold text-4xl text-[#0036c6] uppercase">
-                            Have fun at LOCAL CHIEF INFORMATION OFFICER (CIO) CONFERENCE! <br />
-                            <span className="text-sm text-gray-600">Waiting for the next attendee...</span>
+                        <div className="text-center font-bold text-6xl gap-10 flex flex-col text-[#0036c6] uppercase">
+                            <span className=' text-7xl'>Welcome to</span> The State of the Municipal Address (SOMA) <br />
+                            <span className="text-lg text-gray-600">Waiting for the next attendee...</span>
                         </div>
                     )}
                 </div>
@@ -280,6 +286,9 @@ function Display() {
                     ))}
                 </div>
             </div> */}
+            <div>
+
+            </div>
         </div>
     );
 }
